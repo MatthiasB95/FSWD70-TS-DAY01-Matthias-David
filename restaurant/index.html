@@ -9,19 +9,62 @@
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-	<div class="container">
+<body >
+<nav class="navbar navbar-expand-lg navbar-info bg-info">
+  <div class="text-white">Welcome to my Restaurant</div>
+</nav>
+
+<div class="container-fluid jumbotron">
+		
+	<div class="tab">
+	    <button class="tablinks" onclick="openCity(event, '1')" id="defaultOpen">Pizza</button>
+	    <button class="tablinks" onclick="openCity(event, '2')">Pasta</button>
+	    <button class="tablinks" onclick="openCity(event, '3')">Burger</button>
+  	</div>
+
 	<div class="row">
-		<div class="col-lg-6 d-flex justify-content-around" id="food"></div>
+		<div class="col-lg-6 d-flex justify-content-around tabcontent" id="1"></div>
 	</div>
+
 	<div class="row">
-		<div class="col-lg-6 d-flex justify-content-around" id="price"></div>
+		<div class="col-lg-6 d-flex justify-content-around tabcontent" id="2"></div>
 	</div>
+
 	<div class="row">
-		<div class="col-lg-6 d-flex justify-content-around" id="nr"></div>
+		<div class="col-lg-6 d-flex justify-content-around tabcontent" id="3"></div>
 	</div>
+		
+		
+</div>
+
+
+<nav class="navbar navbar-expand-sm bg-info navbar-dark justify-content-around fixed-bottom">
+  <div class="form-group">
+    <label for="inputlg">Feedback</label>
+    <input class="form-control input-lg" id="inputlg" type="text">
+    <button type="button" class="btn btn-link bg-dark">Submit</button>
+  </div>
+   
+  <div class="star-rating">
+	  <div class="star-rating__title">Your rating:</div>
+		  <div class="star-rating__stars">
+		    <input class="star-rating__input" type="radio" name="rating" value="1" id="rating-1" />
+		    <label class="star-rating__label" for="rating-1" aria-label="One"></label>
+		    <input class="star-rating__input" type="radio" name="rating" value="2" id="rating-2" />
+		    <label class="star-rating__label" for="rating-2" aria-label="Two"></label>
+		    <input class="star-rating__input" type="radio" name="rating" value="3" id="rating-3" />
+		    <label class="star-rating__label" for="rating-3" aria-label="Three"></label>
+		    <input class="star-rating__input" type="radio" name="rating" value="4" id="rating-4" />
+		    <label class="star-rating__label" for="rating-4" aria-label="Four"></label>
+		    <input class="star-rating__input" type="radio" name="rating" value="5" id="rating-5" />
+		    <label class="star-rating__label" for="rating-5" aria-label="Five"></label>
+		    <div class="star-rating__focus"></div>
+		  </div>
 	</div>
+</nav>
+
 <script src="restaurant.js"></script>
 </body>
 </html>
